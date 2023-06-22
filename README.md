@@ -3,6 +3,7 @@
 - [aws-tf-deployer-image](#aws-tf-deployer-image)
   - [Goal](#goal)
   - [Size comparison](#size-comparison)
+  - [Dockerhub](#dockerhub)
   - [Build](#build)
   - [References](#references)
 
@@ -18,9 +19,15 @@ I hoped to achieve more, but thats what it is. 🤷🏻
 docker inspect -f "{{ .Size }}" amazon/aws-cli:latest | numfmt --to=si
 405M
 
+docker inspect -f "{{ .Size }}" zenika/terraform-aws-cli:latest | numfmt --to=si
+346M
+
 docker inspect -f "{{ .Size }}" aws-tf-deployer-image:local | numfmt --to=si
 204M
 ```
+
+## Dockerhub
+Latest builds are also pushed to this public Dockerhub repository: https://hub.docker.com/r/hikkoiri/aws-tf-deployer-image
 
 ## Build
 
